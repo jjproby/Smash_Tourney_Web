@@ -1,3 +1,13 @@
 body {
   background-color: powderblue;
 }
+
+#names {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#menu {
+  color: black;
+}
