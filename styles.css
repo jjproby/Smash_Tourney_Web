@@ -11,3 +11,12 @@ body {
 #menu {
   color: black;
 }
+
+#champ {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#fighter {
+  text-decoration: underline;
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts/tourney.js"></script>
+    <title> Smash Ultimate </title>
+  </head>
+
+  <body>
+    <h1> Tourney Maker </h1>
+    <h2> <a id=menu href="home.html">Home</a> | <a id=menu href="winners.html"> Current Winners </a> | <b>Tourney Maker</b> </h2>
+    <p> Get a tourney of 16 fighters! </p>
+    <button onclick="getFighters()"> Get Fighters! </button>
+    <br><br>
+    <p id="fighters"></p>
+    <p id="test"></p>
+    <script>
+      var min=0;
+      var max=5;
+      var fighters = ["Mario", "Donkey Kong", "Link", "Peach", "Toon Link"];
+      var fighterNum = fighters.length;
+
+      function getFighters() {
+        var chosen = "";
+        var chosenNums = [];
+        for (var i = 0; i < 4; i++) {
+          var random = Math.floor(Math.random() * (max - min)) + min;
+          while (chosenNums.includes(random) == true) {
+            var random = Math.floor(Math.random() * (max - min)) + min;
+          }
+          chosen = chosen.concat( i+1, ". ", fighters[random], " ");
+          chosenNums.push(random);
+        }
+        document.getElementById("test").innerHTML = chosen;
+      }
+    </script>
+  </body>
+</html>
